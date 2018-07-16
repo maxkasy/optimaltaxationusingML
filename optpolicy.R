@@ -1,19 +1,22 @@
 rm(list = ls())
 
 # set the following to the appropriate folder locations:
+# setwd("")
+datapath="Data/"
 
-setwd("~/Dropbox/research/WorkInProgress/PolicyDecisions/RCode")
-datapath="../Applications/2701_RAND_data/"
-
+# loading all functions
 source("optpolicyFunctions.R")
 
+# loading data
 regdata=loaddata(datapath)
 
 #subsampling for debugging
 #regdata=regdata[sample(dim(regdata)[1], 1000),] #subsample of 1000 random observations
 
+# running main analysis
 regpredictions=gpregwelfare(regdata, doSWF=TRUE, doCI=TRUE, varyLambda=TRUE)
 
+# plots
 insuranceplots(regpredictions, printpdf=TRUE)
 varyingLambdaplots(regpredictions, printpdf=TRUE)
 validationplots(regdata, regpredictions, printpdf=TRUE)
