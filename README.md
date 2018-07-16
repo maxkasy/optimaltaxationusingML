@@ -12,7 +12,7 @@ The code in this archive implements the proposed methods
 
 ### Data
 **data/** is the subfolder containing the .csv files required for applying the proposed methods to the RAND health insurance experiment.
-These files are derived from the data available at (https://www.aeaweb.org/jep/app/2701_RAND_data.zip) using **datatomatlabRAND2.do**, available in the same subfolder.
+These files are derived from the data available at https://www.aeaweb.org/jep/app/2701_RAND_data.zip using **datatomatlabRAND2.do**, available in the same subfolder.
 
 
 ### R-code
@@ -20,12 +20,9 @@ Running the R script **optpolicy.R** produces all the figures in the paper.
 This script invokes the functions defined in **optpolicyFunctions.R**.
 
 
-1) *loaddata(datapath)*:
-	This function loads the RAND health insurance data.
+1) *loaddata(datapath)*: This function loads the RAND health insurance data.
 
-2) *gpregwelfare*:
-	This function implements a general purpose function for Gaussian process regression, estimation of posterior expected welfare, and frequentist inference on the optimal policy. This is the function which users might wish to take to other applications. It takes the following arguments, all of which except for "regdata" are optional:
-
+2) *gpregwelfare*: This function implements a general purpose function for Gaussian process regression, estimation of posterior expected welfare, and frequentist inference on the optimal policy. This is the function which users might wish to take to other applications. It takes the following arguments, all of which except for "regdata" are optional:
 	+ regdata: dataframe containing outcome, treatment, and controls
 	+ Yname, Xname: names of outcome variable and treatment variable, default are X and Y
 	+ controlnames: variable names for controls, default are all variables in regdata except X, Y
