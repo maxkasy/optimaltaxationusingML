@@ -20,7 +20,7 @@ Running the R script **optpolicy.R** produces all the figures in the paper.
 This script invokes the functions defined in **optpolicyFunctions.R**.
 
 
-1) *loaddata(datapath)*: This function loads the RAND health insurance data.
+1) *loaddata*: This function loads the RAND health insurance data.
 
 2) *gpregwelfare*: This function implements a general purpose function for Gaussian process regression, estimation of posterior expected welfare, and frequentist inference on the optimal policy. This is the function which users might wish to take to other applications. It takes the following arguments, all of which except for "regdata" are optional:
 	+ regdata: dataframe containing outcome, treatment, and controls
