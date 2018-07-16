@@ -29,7 +29,7 @@ This script invokes the functions defined in **optpolicyFunctions.R**.
 	+ t: gridpoints at which to evaluate predictions, default is [0,1]
 	+ doSWF: whether to estimate SWF in addition to response function, default is FALSE
 	+ doCI: whether to calculate frequentist confidence intervals, default is FALSE
-	+ varyLambda:  #whether to consider a range of values for lambda
+	+ varyLambda:  whether to consider a range of values for lambda
 
 	+ smootW, smoothX: smoothness of prior: smaller = smoother; inverse of lengthscale
 	+ sig2: residual variance; this is relative to a prior variance of 1 for m
